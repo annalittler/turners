@@ -1,0 +1,150 @@
+#header-turners-logo {
+  width: 20%;
+}
+
+#header-top-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #cccccc;
+}
+
+#header-top-row a {
+  margin: 10px 15px;
+  font-size: 13px;
+  color: #0076be;
+  font-weight: 500;
+}
+
+#header-middle-row {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 8%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+#header-middle-row span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-middle-row img {
+}
+
+#header-middle-row-links p {
+  margin: 0 10px;
+}
+
+#bottom-row {
+  background-color: #0076bd;
+
+  display: flex;
+  justify-content: space-evenly;
+  color: #fff;
+  font-weight: 700;
+  padding: 0 60px 0 60px;
+}
+
+.bottom-row-left-span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-login,
+.header-phone,
+.header-find-us {
+  color: #666666;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.header-login a {
+  color: #0076be;
+}
+
+.bottom-row-right-span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bottom-row p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15px;
+  height: 100%;
+}
+
+#bottom-row p:hover {
+  cursor: pointer;
+  background-color: #004a86;
+  transition: background-color 0.3s linear;
+}
+
+#mag-glass {
+  color: #fff;
+  margin: 0 12px 0 0;
+}
+
+#down-arrow {
+  color: #b9c2ca;
+  margin: 0 7px;
+  font-size: 12px;
+}
+
+#phone-icon,
+#location-icon,
+#user-icon {
+  margin: 0 6px 0 0;
+  color: #666666;
+  font-size: 14px;
+}
+
+#chinese {
+  color: #b71134;
+  font-weight: 700;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+#search-bar {
+  background-color: #0076bd;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+#search-bar-input:focus {
+  outline: none;
+}
+
+#search-bar-input,
+#submit-btn {
+  border-radius: 0;
+  border: 1px solid #0076bd;
+}
+
+.not-found::after {
+  content: "No results, try again";
+  position: absolute;
+  display: block;
+  width: 200px;
+  text-align: left;
+  font-size: 10px;
+  animation: fade-out-animation 5s forwards;
+}
+
+@keyframes fade-out-animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

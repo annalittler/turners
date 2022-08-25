@@ -1,10 +1,9 @@
 require("dotenv").config();
+
 const express = require("express");
 const app = express();
 const axios = require("axios");
 const cors = require("cors");
-
-const bp = require("body-parser");
 
 app.use(cors());
 app.use(express.json());
@@ -21,25 +20,16 @@ const headers = {
 
 app.post("/search", async (req, res) => {
   const { query } = req.body;
-  console.log(query);
   try {
-    // await console.log("hi1;");
     const response = await axios.get(
       `https://api.bing.microsoft.com/v7.0/custom/search?q=${query}&customconfig=ade75262-9b34-4f48-b692-fa28f9a45629&mkt=en-NZ`,
       headers
     );
-    console.log(response);
-    // res.send(response.data);
-    // res.status(200);
+    res.send(response.data);
   } catch (error) {
     console.log(error);
   }
 });
 
-// const searchBing = async (req, res) => {
-// };
-
-// app.get("/search", searchBing);
-// searchBing();
-//
+// listening at PORT for calls
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));

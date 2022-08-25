@@ -1,36 +1,36 @@
 import "./App.css";
-
 import { useState } from "react";
-import Search from "./Search";
-import Axios from "axios";
+import Header from "./components/header/Header";
+import SearchBar from "./components/search-bar/SearchBar";
+import BodyPlaceholder from "./components/body-placeholder/BodyPlaceholder";
+import Modal from "./components/modal/Modal";
 
 function App() {
-  const [inputQuery, setInputQuery] = useState("hello");
-
-  const handleChange = (e) => {
-    setInputQuery(e.target.value);
-  };
-
-  const handleSearch = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await Axios.post("http://localhost:4000/search", {
-        query: inputQuery,
-      });
-      console.log(response);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const [modalState, setModalState] = useState(false);
+  const [searchResults, setSearchResults] = useState(null);
+  const [inputQuery, setInputQuery] = useState(undefined);
 
   return (
     <div className="App">
-      hello
-      <form action="" onSubmit={handleSearch}>
-        <input type="text" onChange={handleChange} />
-        <button>Submit</button>
-      </form>
-      sdfsdfsdf
+      {modalState === true && (
+        <Modal
+          modalState={modalState}
+          setModalState={setModalState}
+          searchResults={searchResults}
+          setSearchResults={setSearchResults}
+          inputQuery={inputQuery}
+          setInputQuery={setInputQuery}
+        />
+      )}
+      <Header
+        inputQuery={inputQuery}
+        setInputQuery={setInputQuery}
+        searchResults={searchResults}
+        setSearchResults={setSearchResults}
+        modalState={modalState}
+        setModalState={setModalState}
+      />
+      <BodyPlaceholder />
     </div>
   );
 }

@@ -1,0 +1,11 @@
+#body-placeholder {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  min-height:100vh;
+  background-image: url("./turners-body.png");
+  background-image: url("./turners-body1.png");
+  background-size: contain;
+  /* background-position: 50%; */
+  background-repeat: no-repeat;
+}
