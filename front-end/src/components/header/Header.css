@@ -128,6 +128,13 @@ a:visited {
 #submit-btn {
   border-radius: 0;
   border: 1px solid #0076bd;
+  background-color: #fff;
+  padding: 5px;
+}
+
+#submit-btn {
+  color: #0076bd;
+  font-weight: 700;
 }
 
 .not-found::after {

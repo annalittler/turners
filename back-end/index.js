@@ -31,5 +31,4 @@ app.post("/search", async (req, res) => {
   }
 });
 
-// listening at PORT for calls
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
