@@ -11,6 +11,8 @@ import {
 import TurnersLogo from "./assets/turners-cars-logo.png";
 import Axios from "axios";
 
+const validateString = require("./ValidateString");
+
 export default function Header({
   searchResults,
   setSearchResults,
@@ -21,14 +23,12 @@ export default function Header({
   //   const [searchResults, setSearchResults] = useState(null);
   const [notFound, setNotFound] = useState(false);
 
-  const handleChange = (e) => {
-    const userInput = e.target.value;
-    const inputSpecCharsRemoved = userInput.replace(/[^a-z0-9]/gi, "").trim();
-    setInputQuery(inputSpecCharsRemoved);
-    return inputSpecCharsRemoved;
-  };
   // takes search box input, removes punctuation and assigns to inputQuery variable,
   //   ready to be searched
+  const handleChange = (e) => {
+    const userInput = e.target.value;
+    setInputQuery(validateString(userInput));
+  };
 
   // run when user searches, checks for response to have data, if it does will add data
   //   to searchResults state, otherwise turns notFound state to be true
