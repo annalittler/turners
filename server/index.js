@@ -1,4 +1,5 @@
 require("dotenv").config();
+const functions = require("firebase-functions");
 
 const express = require("express");
 const app = express();
@@ -32,3 +33,5 @@ app.post("/search", async (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
+
+exports.app = functions.https.onRequest(app);

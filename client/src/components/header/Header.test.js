@@ -12,6 +12,6 @@ describe("remove anything except alphanumeric characters and spaces, then trim s
     const input = "!!!hello world";
     const expected = "hello world";
     const actual = validateString(input);
-    expect(actual).toBe("expected");
+    expect(actual).toBe(expected);
   });
 });
