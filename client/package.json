@@ -20,7 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "CI=false && react-scripts build",
-    "test": "jest --watch",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
