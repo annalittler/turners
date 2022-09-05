@@ -29,7 +29,7 @@ function Homepage() {
         modalState={modalState}
         setModalState={setModalState}
       />
-      <BodyPlaceholder />
+      {/* <BodyPlaceholder /> */}
     </div>
   );
 }
