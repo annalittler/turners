@@ -1,0 +1,93 @@
+@use "../../_variables.scss" as v;
+
+#header-turners-logo {
+  width: 20%;
+}
+
+#header-top-row {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 55px;
+  justify-content: space-between;
+  align-items: center;
+  // margin:  0;
+}
+
+#nav-bar {
+  background-color: #0076bd;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: v.$turners-white;
+  font-weight: 700;
+  padding: 0 20px 0 20px;
+  padding: 15px 60px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.active {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.bottom-row-right-span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links a {
+  font-weight: 400;
+  padding: 0px 15px;
+  height: 100%;
+  color: v.$turners-white;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+#search-bar-input:focus {
+  outline: none;
+}
+
+#search-bar-input,
+#submit-btn {
+  border-radius: 0;
+  border: 1px solid #0076bd;
+  background-color: #fff;
+  padding: 5px;
+}
+
+#search-bar-input {
+  background-image: url("./assets/magnifying-glass-solid.svg");
+  background-repeat: no-repeat;
+  background-size: 8%;
+  background-position: 5%;
+  padding-left: 30px;
+  background-color: #fff;
+}
+.not-found::after {
+  content: "No results, try again";
+  position: absolute;
+  display: block;
+  width: 200px;
+  text-align: left;
+  font-size: 10px;
+  animation: fade-out-animation 5s forwards;
+}
+
+@keyframes fade-out-animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
