@@ -27,7 +27,7 @@ describe("Removing unwanted charatcers in string", () => {
     { input: "   hello world   ", expected: "hello world" },
     { input: "!!!hello world", expected: "hello world" },
     { input: "!!!hello()other world)", expected: "hello other world" },
-    { input: "!w@o*r%l#d@", expected: "w o r l d" },
+    { input: "#h$e*l*l(o!w@o*r%l#d@", expected: "h e l l o w o r l d" },
     // above will produce failed test if expected is "world"
   ];
 
