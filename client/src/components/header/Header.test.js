@@ -1,20 +1,20 @@
-const validateString = require("./ValidateString")
+const validateString = require("./ValidateString");
 
 describe("remove anything except alphanumeric characters and spaces, then trim spaces from start and end", () => {
   test("remove spaces at start and end of string", () => {
-    const input = "   hello world   "
-    const expected = "hello world"
-    const actual = validateString(input)
-    expect(actual).toBe(expected)
-  })
+    const input = "   hello world   ";
+    const expected = "hello world";
+    const actual = validateString(input);
+    expect(actual).toBe(expected);
+  });
 
   test("remove ! from string", () => {
-    const input = "!!!hello world"
-    const expected = "hello world"
-    const actual = validateString(input)
-    expect(actual).toBe(expected)
-  })
-})
+    const input = "!!!hello world";
+    const expected = "hello world";
+    const actual = validateString(input);
+    expect(actual).toBe(expected);
+  });
+});
 
 describe("Removing unwanted charatcers in string", () => {
   const testingInputs = [
@@ -29,13 +29,13 @@ describe("Removing unwanted charatcers in string", () => {
     { input: "!!!hello()other world)", expected: "hello other world" },
     { input: "#h$e*l*l(o!w@o*r%l#d@", expected: "h e l l o w o r l d" },
     // above will produce failed test if expected is "world"
-  ]
+  ];
 
-  testingInputs.map((unitOne) => {
+  testingInputs.forEach((unitOne) => {
     it(`Removing non-alphabetic charaters in ${unitOne.input}`, () => {
-      const actual = validateString(unitOne.input)
+      const actual = validateString(unitOne.input);
 
-      return expect(actual).toBe(unitOne.expected)
-    })
-  })
-})
+      return expect(actual).toBe(unitOne.expected);
+    });
+  });
+});

@@ -1,10 +1,10 @@
 {
   "name": "mission-3",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "CI=false && react-scripts build"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +14,7 @@
   },
   "devDependencies": {
     "sonarqube-scanner": "^2.8.1"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }
