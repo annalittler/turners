@@ -1,3 +1,9 @@
+@use "../../_variables.scss" as v;
+
+#image-section {
+  margin: 0;
+}
+
 #hero-img-div {
   width: 100vw;
   background-image: url("./mazda.avif");
@@ -12,5 +18,5 @@
 
 #hero-img-div h1,
 #hero-img-div h2 {
-  color: #ffffff;
+  color: v.$solid-white;
 }
