@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink, Link } from "react-router-dom";
 import "./Header.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
@@ -51,36 +52,57 @@ export default function Header({
   return (
     <div id="header">
       <div id="header-top-row">
-        <img src={TurnersLogo} alt="Turners Logo" id="header-turners-logo" />
+        <Link to="/">
+          <img src={TurnersLogo} alt="Turners Logo" id="header-turners-logo" />
+        </Link>
         <div className="header-btns">
           <Button value="LOGIN" className="nav-btn" />
           <Button value="REGISTER" className="nav-btn" />
         </div>
       </div>
       <div id="nav-bar">
-        <span className="nav-links">
-          <a href="/" className="br-find-car">
+        <nav>
+          <NavLink
+            to="cars"
+            className={({ isActive }) => (isActive ? "active" : "nav-link")}
+          >
             Find a Car
-          </a>
-          <a href="/" className="br-how-to-buy">
-            How to Buy
-          </a>
-          <a href="/" className="br-sell-car">
+          </NavLink>
+          <NavLink
+            to="/how-to-buy"
+            className={({ isActive }) => (isActive ? "active" : "nav-link")}
+          ></NavLink>
+          <NavLink
+            to="/sell"
+            className={({ isActive }) => (isActive ? "active" : "nav-link")}
+          >
             Sell your Car
-          </a>
-          <a href="/" className="br-finance">
+          </NavLink>
+          <NavLink
+            to="/finance"
+            className={({ isActive }) => (isActive ? "active" : "nav-link")}
+          >
             Finance
-          </a>
-          <a href="/" className="br-insurance active">
+          </NavLink>
+          <NavLink
+            to="/insurance"
+            className={({ isActive }) => (isActive ? "active" : "nav-link")}
+          >
             Insurance
-          </a>
-          <a href="/" className="br-auctions">
+          </NavLink>
+          <NavLink
+            to="/auctions"
+            className={({ isActive }) => (isActive ? "active" : "nav-link")}
+          >
             Auctions
-          </a>
-          <a href="/" className="br-services-info">
+          </NavLink>
+          <NavLink
+            to="/info"
+            className={({ isActive }) => (isActive ? "active" : "nav-link")}
+          >
             Services &amp; Info
-          </a>
-        </span>
+          </NavLink>
+        </nav>
         <form
           action=""
           onSubmit={handleSearch}

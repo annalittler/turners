@@ -10,13 +10,44 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: bottom;
+  background-position-y: 85%;
   height: 75vh;
   display: flex;
   flex-direction: column;
   /* justify-content: */
+  position: relative;
+  justify-content: center;
 }
 
-#hero-img-div h1,
-#hero-img-div h2 {
+.main-text h1,
+.main-text h2 {
   color: v.$solid-white;
+  margin: 0;
+  // border: 2px solid blue;
 }
+
+.main-text h1 {
+  font-size: 2em;
+  margin: 16px 0;
+}
+
+.main-text h2 {
+  font-size: 1.2em;
+  font-weight: 500;
+  font-style: oblique;
+  margin: 16px 0;
+}
+
+.main-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // border: 2px solid red;
+  margin: 0 80px;
+}
+
+// .main-text {
+//   position: absolute;
+//   top: 100px;
+//   left: 50px;
+// }
