@@ -1,0 +1,39 @@
+.quote-step-2-h1{
+    font-weight: 900;
+    margin: auto;
+    width: 70%;
+
+    padding-bottom: 1rem;
+    font-size: 30px;
+}
+
+.quote-step-2-mid{
+    padding-bottom: 60px;
+    background-color: var(--lightGrey);
+    display: flex;
+    flex-direction: row;
+    max-width: 70%;
+    margin: auto;
+}
+
+.quote-step-2-left{
+    padding-right: 2rem;
+}
+
+
+.full-bleed{
+    box-shadow: 0 0 0 100vmax var(--lightGrey);
+    clip-path: inset(0 -100vmax);
+}
+
+.quote-step-2-right{
+    height: fit-content;
+    position: sticky;
+    top: 0;
+
+}
+
+.quote-step-2-left-bottom{
+    display: flex;
+    justify-content: space-between;
+}

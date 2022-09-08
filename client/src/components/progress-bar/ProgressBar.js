@@ -12,14 +12,14 @@ export default function ProgressBar({ progress }) {
     const [refresher, setRefresher] = useState(0)
     const valueForProgressBar = progress
 
+    const font = { fontFamily: `Inter` }
+
     useEffect(() => {
         const progressChecker = () => {
             switch (valueForProgressBar) {
                 case "2":
-                    // eslint-disable-next-line no-sequences
                     return setStepTwo("2"), setRefresher(1)
                 case "3":
-                    // eslint-disable-next-line no-sequences
                     return setStepThree("3"), setStepTwo("2"), setRefresher(2)
                 case "4":
                     return (
@@ -53,8 +53,8 @@ export default function ProgressBar({ progress }) {
                         width={600}
                         alt="line"
                     />
-                    <h4>Step 1</h4>
-                    <p>Car / Driver Details</p>
+                    <h4 style={font}>Step 1</h4>
+                    <p style={font}>Car / Driver Details</p>
                 </div>
                 <div className="progress-second">
                     <img
@@ -70,8 +70,8 @@ export default function ProgressBar({ progress }) {
                         width={600}
                         alt="line"
                     />
-                    <h4>Step 2</h4>
-                    <p>Quote / Add ons</p>
+                    <h4 style={font}>Step 2</h4>
+                    <p style={font}>Quote / Add ons</p>
                 </div>
                 <div className="progress-third">
                     <img
@@ -87,8 +87,8 @@ export default function ProgressBar({ progress }) {
                         width={600}
                         alt="line"
                     />
-                    <h4>Step 3</h4>
-                    <p>Quote Summary</p>
+                    <h4 style={font}>Step 3</h4>
+                    <p style={font}>Quote Summary</p>
                 </div>
                 <div className="progress-fourth">
                     <img
@@ -97,8 +97,8 @@ export default function ProgressBar({ progress }) {
                         width={40}
                         alt="circle"
                     />
-                    <h4>Step 4</h4>
-                    <p>Payment</p>
+                    <h4 style={font}>Step 4</h4>
+                    <p style={font}>Payment</p>
                 </div>
             </div>
         </>
