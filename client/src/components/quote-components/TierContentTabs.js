@@ -5,7 +5,6 @@ export default function TierContentTabs({
     name,
     cost,
     payFrequency,
-    frequencyValue,
     glassExcess,
     breakdownService,
     rentalVehicle,
@@ -46,11 +45,7 @@ export default function TierContentTabs({
                     let breakdownYear = breakdown * 12
                     let rentalYear = rental * 12
                     let allYear =
-                        costYear +
-                        glassYear +
-                        breakdownYear +
-                        rentalYear -
-                        158.54
+                        costYear + glassYear + breakdownYear + rentalYear
                     let nyearTotal = +(Math.round(allYear + "e+2") + "e-2")
                     return setTotalAmount(nyearTotal)
                 default:
@@ -75,15 +70,23 @@ export default function TierContentTabs({
                     </h1>
                 </div>
                 <div className="quote-tab-cost">
-                    <h2>${totalAmount}</h2>
+                    <h2>
+                        $
+                        {
+                            +(
+                                Math.round(
+                                    (totalAmount * 86.075) / 100 + "e+2"
+                                ) + "e-2"
+                            )
+                        }
+                    </h2>
                     <p> &nbsp; per {payFrequency}</p>
                 </div>
                 <div className="quote-tab-details">
                     {payFrequency === "year"
                         ? `By paying yearly you save $${+(
-                              Math.round(
-                                  totalAmount + 158.54 - totalAmount + "e+2"
-                              ) + "e-2"
+                              Math.round((totalAmount * 13.925) / 100 + "e+2") +
+                              "e-2"
                           )}`
                         : "Note: You save money if you choose to pay yearly"}
                 </div>

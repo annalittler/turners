@@ -1,9 +1,14 @@
 .optional-main h2{
-    font-size: 30px;
+    font-size: 36px;
+    font-weight: 800;
 }
 
 .optional-main h4{
-    font-size: 20px;
+    font-size: 30px;
+}
+
+.optional-main p{
+    font-size: 28px;
 }
 
 .optional-btn-main{
@@ -16,12 +21,12 @@
 }
 
 .optional-btn-left p{
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 200;
 }
 
 .optional-btn-left h4{
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 800;
 }
 
@@ -31,10 +36,17 @@
     margin: auto;
 }
 
-.optional-btn-left button{
+
+.optional-btn-bottom details{
     font-size: 20px;
     border: none;
-    border-bottom: 1px solid var(--lightGrey);
+    border-bottom: 1px solid black;
     background-color: white;
     cursor: pointer;
+    width: fit-content;
+    text-align: start;
+}
+
+.optional-btn-bottom details summary{
+    list-style: none;
 }

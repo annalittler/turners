@@ -1,4 +1,5 @@
 import "./style/QuoteCard.css"
+import { InsuranceCovers } from "./InsuranceData"
 import Icon from "./assests/chevron-down-grey.png"
 import pdfIcon from "./assests/pdf-icon.png"
 import ReuseableCard from "../reusable-card/ReuseableCard"
@@ -121,17 +122,26 @@ const QuoteCard = ({ quoteDetails, selectQuote }) => {
                             )
                         })}
                 </div>
-                <div className="quote-card-bottom-2">
-                    <button className="btn-btn-btn" style={font}>
-                        See what's covered &nbsp;
-                        <img
-                            src={Icon}
-                            fill={`black`}
-                            width={15}
-                            alt="arrow icon"
-                        />
-                    </button>
-                </div>
+                <ReuseableCard shadow={`none`} padding={`1rem 3rem 0 3rem`}>
+                    <div className="quote-btn-bottom">
+                        <details>
+                            <summary>
+                                See what's covered{" "}
+                                <img
+                                    src={Icon}
+                                    fill={`black`}
+                                    width={15}
+                                    alt="arrow icon"
+                                />
+                            </summary>
+                            {InsuranceCovers.filter(
+                                (i) => i.set === btnSelected
+                            ).map((item) => {
+                                return item.details
+                            })}
+                        </details>
+                    </div>
+                </ReuseableCard>
             </ReuseableCard>
         </>
     )

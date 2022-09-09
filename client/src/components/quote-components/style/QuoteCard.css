@@ -39,12 +39,7 @@
 }
 
 .quote-card-bottom{
-    width: 100%
-}
-
-.quote-card-bottom-2{
-    font-size: 18px;
-    text-align: center;
+    width: 100%;
 }
 
 .quote-buttons {
@@ -53,15 +48,21 @@
     margin-bottom: 1rem;
 }
 
-.quote-card-bottom-2{
-    padding: 1rem 0;
-    font-size: 24px;
+.quote-btn-bottom{
+    margin-top: -2rem;
 }
 
-.quote-card-bottom-2 button{
+.quote-btn-bottom details {
     font-size: 20px;
     border: none;
-    border-bottom: 1px solid var(--lightGrey);
+    border-bottom: 1px solid black;
     background-color: white;
     cursor: pointer;
+    width: fit-content;
+    margin-inline: auto ;
 }
+
+.quote-btn-bottom details summary {
+    list-style: none;
+}
+
