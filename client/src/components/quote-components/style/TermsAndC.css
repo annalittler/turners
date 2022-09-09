@@ -1,0 +1,76 @@
+.terms-header{
+    text-align: start;
+}
+
+.terms-form p{
+    font-size: 20px;
+}
+
+.terms-form{
+    overflow: hidden;
+}
+
+.remove-scroll-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.terms-form-bottom{
+    height: 5vh;
+    background-color: var(--primary);
+    text-align: start;
+    padding-top: 1rem;
+    position: relative;
+}
+
+.terms-form-bottom h2{
+    position: absolute;
+    font-size: 20px;
+    top: .5rem;
+    left: 4rem;
+    color: white;
+}
+
+.full-bleed-blue{
+    box-shadow: 0 0 0 100vmax var(--primary);
+    clip-path: inset(0 -100vmax);
+}
+
+.terms-label{
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+}
+
+
+label {
+    display: block;
+}
+
+input[type=radio] {
+    appearance: none;
+    background-color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    display: inline-grid;
+    place-content: center;
+    cursor: pointer;
+}
+
+input[type=radio]::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    transform: scale(0);
+    transform-origin: bottom left;
+    background-color: var(--primary);
+    clip-path: polygon(13% 50%, 34% 66%, 81% 2%, 100% 18%, 39% 100%, 0 71%);
+}
+
+input[type=radio]:checked::before {
+    transform: scale(1);
+}
+
+input[type=radio]:checked {
+    background-color: white;
+}

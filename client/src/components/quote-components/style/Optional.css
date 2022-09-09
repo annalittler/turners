@@ -1,0 +1,40 @@
+.optional-main h2{
+    font-size: 30px;
+}
+
+.optional-main h4{
+    font-size: 20px;
+}
+
+.optional-btn-main{
+    display: flex;
+}
+
+.optional-btn-left{
+    width: 80%;
+    text-align: start;
+}
+
+.optional-btn-left p{
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.optional-btn-left h4{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.optional-btn-right{
+    width: 20%;
+    align-content: center;
+    margin: auto;
+}
+
+.optional-btn-left button{
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid var(--lightGrey);
+    background-color: white;
+    cursor: pointer;
+}
