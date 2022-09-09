@@ -1,0 +1,114 @@
+* {
+    padding-left: 20px;
+}
+
+.container-car-details {
+    position: top;
+    width: 1258px;
+    height: 637px;
+    left: 87px;
+    top: 430px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+};
+
+/* .h3 {
+    position: absolute;
+    width: 244px;
+    height: 29px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000; 
+} */
+
+/* .label {
+    position: absolute;
+    width: 388px;
+    height: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    color: #000000;
+} */
+
+.custom-select {
+    position: relative;
+    line-height: 22px;
+    background-color: #FFFFFF;
+    font-family: 'inter';
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+
+.custom-select-select {
+    position: relative;
+}
+
+.select-selected {
+    background-color: #0076BE;
+}
+
+.button-search {
+    height: 57px;
+    width: 198px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 0.2px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-left: 25px;
+    /* font-family: 'Inter'; */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;      
+    cursor: pointer;
+}
+
+.button-search:hover {
+    background-color: #0076BE;
+    color: white;
+}
+
+.button-group1 {
+    position: aboslute;
+    margin-left:622px;
+    height: 57px;
+    width: 265px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 20px 0px 0px 20px;
+    margin-left: 9%;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.button-group1:hover {
+    background-color: #0076BE;
+    color: white;
+}
+
+.button-group2 {
+    height: 57px;
+    width: 264px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 0px 20px 20px 0px;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.button-group2:hover {
+    background-color: #0076BE;
+    color: white;
+  }
