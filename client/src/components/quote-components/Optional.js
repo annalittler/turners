@@ -1,5 +1,7 @@
 import "./style/Optional.css"
+import { InsuranceDetails } from "./InsuranceData"
 import Icon from "./assests/chevron-down-grey.png"
+import Tick from "./assests/tick-icon.png"
 import ReuseableCard from "../reusable-card/ReuseableCard"
 import { useState } from "react"
 
@@ -36,28 +38,19 @@ export default function Optional({ breakdownCost, glassCost, rentalCost }) {
             <ReuseableCard>
                 <div style={font} className="optional-main">
                     <h2>Optional</h2>
-                    <h4>Choose optional extras to upgrade your cover</h4>
+                    <p>Choose optional extras to upgrade your cover</p>
                     <ReuseableCard border={btnOutline}>
                         <div className="optional-btn-main">
                             <div className="optional-btn-left">
                                 <p>Turners standard breakdown service</p>
                                 <h4>$2.67 per month</h4>
-                                <button>
-                                    Learn more &nbsp;
-                                    <img
-                                        src={Icon}
-                                        fill={`black`}
-                                        width={15}
-                                        alt="arrow icon"
-                                    />
-                                </button>
                             </div>
                             <div className="optional-btn-right">
                                 <ReuseableCard {...componentStyle}>
                                     <button
                                         className={
                                             breakdownService === "0"
-                                                ? "reusable-selected-btn"
+                                                ? "reusable-selected-green-btn"
                                                 : "reusable-add-btn"
                                         }
                                         onClick={breakdownCost}
@@ -69,12 +62,32 @@ export default function Optional({ breakdownCost, glassCost, rentalCost }) {
                                         }
                                         id="breakdown"
                                     >
-                                        {breakdownService === "0"
-                                            ? "Remove"
-                                            : "+ Add"}
+                                        {breakdownService === "0" ? (
+                                            <img
+                                                src={Tick}
+                                                alt="tick"
+                                                width={40}
+                                            />
+                                        ) : (
+                                            "+ Add"
+                                        )}
                                     </button>
                                 </ReuseableCard>
                             </div>
+                        </div>
+                        <div className="optional-btn-bottom">
+                            <details>
+                                <summary>
+                                    Learn more{" "}
+                                    <img
+                                        src={Icon}
+                                        fill={`black`}
+                                        width={15}
+                                        alt="arrow icon"
+                                    />
+                                </summary>
+                                {InsuranceDetails[0].breakdown}
+                            </details>
                         </div>
                     </ReuseableCard>
                     <ReuseableCard border={btnOutline}>
@@ -82,22 +95,13 @@ export default function Optional({ breakdownCost, glassCost, rentalCost }) {
                             <div className="optional-btn-left">
                                 <p>Turners glass excess</p>
                                 <h4>$5 per month</h4>
-                                <button>
-                                    Learn more &nbsp;
-                                    <img
-                                        src={Icon}
-                                        fill={`black`}
-                                        width={15}
-                                        alt="arrow icon"
-                                    />
-                                </button>
                             </div>
                             <div className="optional-btn-right">
                                 <ReuseableCard {...componentStyle}>
                                     <button
                                         className={
                                             glassExcess === "0"
-                                                ? "reusable-selected-btn"
+                                                ? "reusable-selected-green-btn"
                                                 : "reusable-add-btn"
                                         }
                                         onClick={glassCost}
@@ -105,12 +109,32 @@ export default function Optional({ breakdownCost, glassCost, rentalCost }) {
                                         value={glassExcess === "0" ? "5" : "0"}
                                         id="glass"
                                     >
-                                        {glassExcess === "0"
-                                            ? "Remove"
-                                            : "+ Add"}
+                                        {glassExcess === "0" ? (
+                                            <img
+                                                src={Tick}
+                                                alt="tick"
+                                                width={40}
+                                            />
+                                        ) : (
+                                            "+ Add"
+                                        )}
                                     </button>
                                 </ReuseableCard>
                             </div>
+                        </div>
+                        <div className="optional-btn-bottom">
+                            <details>
+                                <summary>
+                                    Learn more{" "}
+                                    <img
+                                        src={Icon}
+                                        fill={`black`}
+                                        width={15}
+                                        alt="arrow icon"
+                                    />
+                                </summary>
+                                {InsuranceDetails[1].glass}
+                            </details>
                         </div>
                     </ReuseableCard>
                     <ReuseableCard border={btnOutline}>
@@ -118,22 +142,13 @@ export default function Optional({ breakdownCost, glassCost, rentalCost }) {
                             <div className="optional-btn-left">
                                 <p>Turners rental vehicle option</p>
                                 <h4>$5 per month</h4>
-                                <button>
-                                    Learn more &nbsp;
-                                    <img
-                                        src={Icon}
-                                        fill={`black`}
-                                        width={15}
-                                        alt="arrow icon"
-                                    />
-                                </button>
                             </div>
                             <div className="optional-btn-right">
                                 <ReuseableCard {...componentStyle}>
                                     <button
                                         className={
                                             rentalVehicle === "0"
-                                                ? "reusable-selected-btn"
+                                                ? "reusable-selected-green-btn"
                                                 : "reusable-add-btn"
                                         }
                                         onClick={rentalCost}
@@ -143,12 +158,32 @@ export default function Optional({ breakdownCost, glassCost, rentalCost }) {
                                         }
                                         id="rental"
                                     >
-                                        {rentalVehicle === "0"
-                                            ? "Remove"
-                                            : "+ Add"}
+                                        {rentalVehicle === "0" ? (
+                                            <img
+                                                src={Tick}
+                                                alt="tick"
+                                                width={40}
+                                            />
+                                        ) : (
+                                            "+ Add"
+                                        )}
                                     </button>
                                 </ReuseableCard>
                             </div>
+                        </div>
+                        <div className="optional-btn-bottom">
+                            <details>
+                                <summary>
+                                    Learn more{" "}
+                                    <img
+                                        src={Icon}
+                                        fill={`black`}
+                                        width={15}
+                                        alt="arrow icon"
+                                    />
+                                </summary>
+                                {InsuranceDetails[2].rental}
+                            </details>
                         </div>
                     </ReuseableCard>
                 </div>

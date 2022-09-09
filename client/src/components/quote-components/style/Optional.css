@@ -1,0 +1,52 @@
+.optional-main h2{
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.optional-main h4{
+    font-size: 30px;
+}
+
+.optional-main p{
+    font-size: 28px;
+}
+
+.optional-btn-main{
+    display: flex;
+}
+
+.optional-btn-left{
+    width: 80%;
+    text-align: start;
+}
+
+.optional-btn-left p{
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.optional-btn-left h4{
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.optional-btn-right{
+    width: 20%;
+    align-content: center;
+    margin: auto;
+}
+
+
+.optional-btn-bottom details{
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+    width: fit-content;
+    text-align: start;
+}
+
+.optional-btn-bottom details summary{
+    list-style: none;
+}

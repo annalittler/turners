@@ -17,7 +17,7 @@ const InsuranceData = [
     },
     {
         set: "third",
-        name: "Third Party",
+        name: "Third Party Only",
         rating: null,
         cost: 25.28,
         details:
@@ -25,4 +25,37 @@ const InsuranceData = [
     },
 ]
 
-export { InsuranceData }
+const InsuranceDetails = [
+    {
+        breakdown: `Mechanical Breakdown Insurance is an insurance policy that protects you from unexpected costs in the event that your car has a sudden and unforseen breakdown.
+            Cover is available for different types and categories of vehicles. Some vehicles may require an additional premium to be paid. Speak to one of our Business Managers for more information about the type of vehicles covered, special conditions and pricing which apply.`,
+    },
+    {
+        glass: `Glass Excess Insurance is an insurance policy that protects you from unexpected costs in the event that your car has a sudden and unforseen breakdown.
+            Cover is available for different types and categories of vehicles. Some vehicles may require an additional premium to be paid. Speak to one of our Business Managers for more information about the type of vehicles covered, special conditions and pricing which apply.`,
+    },
+    {
+        rental: `Rental Vehicle Option is an insurance policy that protects you from unexpected costs in the event that your car has a sudden and unforseen breakdown.
+            Cover is available for different types and categories of vehicles. Some vehicles may require an additional premium to be paid. Speak to one of our Business Managers for more information about the type of vehicles covered, special conditions and pricing which apply.`,
+    },
+]
+
+const InsuranceCovers = [
+    {
+        set: "comp",
+        details: `Comprehensive Insurance is an insurance policy that protects you from unexpected costs in the event that your car has a sudden and unforseen breakdown.
+            Cover is available for different types and categories of vehicles. Some vehicles may require an additional premium to be paid. Speak to one of our Business Managers for more information about the type of vehicles covered, special conditions and pricing which apply.`,
+    },
+    {
+        set: "fire",
+        details: `Third Party, Fire & Theft Insurance is an insurance policy that protects you from unexpected costs in the event that your car has a sudden and unforseen breakdown.
+            Cover is available for different types and categories of vehicles. Some vehicles may require an additional premium to be paid. Speak to one of our Business Managers for more information about the type of vehicles covered, special conditions and pricing which apply.`,
+    },
+    {
+        set: "third",
+        details: `Third Party Only Insurance is an insurance policy that protects you from unexpected costs in the event that your car has a sudden and unforseen breakdown.
+            Cover is available for different types and categories of vehicles. Some vehicles may require an additional premium to be paid. Speak to one of our Business Managers for more information about the type of vehicles covered, special conditions and pricing which apply.`,
+    },
+]
+
+export { InsuranceData, InsuranceDetails, InsuranceCovers }

@@ -44,3 +44,15 @@
     font-weight: 600;
 }
 
+.reusable-selected-green-btn{
+    background-color: #469F1D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 5vh;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
