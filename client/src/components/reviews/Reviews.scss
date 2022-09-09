@@ -43,7 +43,7 @@
 
 .review-blocks section p {
   margin: 10px 30px;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: oblique;
   position: relative;
 }
@@ -54,10 +54,8 @@
 
 .review-blocks section p:before {
   content: open-quote;
-  font-size: 25px;
-  color: v.$turners-blue;
-  margin: 0;
 }
+
 .review-blocks section p:after {
   content: close-quote;
 }
@@ -67,6 +65,5 @@
   font-size: 22px;
   color: v.$turners-blue;
   vertical-align: bottom;
-  margin: 0 1px;
   line-height: 1;
 }
