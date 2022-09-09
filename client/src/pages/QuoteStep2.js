@@ -1,5 +1,5 @@
 import "./QuoteStep2.css"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Header from "../components/header/Header"
 import ProgressBar from "../components/progress-bar/ProgressBar"
 import QuoteCard from "../components/quote-components/QuoteCard"
@@ -10,6 +10,7 @@ import QuoteSlider from "../components/quote-components/QuoteSlider"
 import Optional from "../components/quote-components/Optional"
 import TermsAndC from "../components/quote-components/TermsAndC"
 import ReuseableCard from "../components/reusable-card/ReuseableCard"
+import FooterTest from "../components/vins-footer/FooterTest"
 
 export default function QuoteStep2() {
     const [quoteSelected, setQuoteSelected] = useState("comp")
@@ -20,6 +21,8 @@ export default function QuoteStep2() {
     const [sliderValue, setSliderValue] = useState(5000)
 
     const font = { fontFamily: `Inter` }
+
+    console.log(`slider amount shown`, sliderValue)
 
     const selectQuote = (e) => {
         setQuoteSelected(e.target.value)
@@ -118,6 +121,7 @@ export default function QuoteStep2() {
                     <MoreTime />
                 </div>
             </div>
+            <FooterTest />
         </>
     )
 }

@@ -1,0 +1,47 @@
+.tier-selection-content{
+    border: 5px solid var(--primary);
+    text-align: center;
+    margin: 0 2rem 3rem 2rem;
+    padding-bottom: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.3)0 5px 8px 0px;
+}
+
+.tier-cost{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 5rem;
+    font-size: 40px;
+}
+
+.tier-cost p{ 
+    margin-bottom: 3.5rem;
+}
+
+.tier-banner{
+    background-color: var(--primary);
+    font-size: 24px;
+    padding: 1.5rem 0;
+    color: white;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.tier-banner-hide{
+    height: 85px;
+}
+
+.tier-selection{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: -3rem;
+    margin-top: -1rem;
+}
+
+.tier-details{
+    font-size: 24px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+/* random comment */
