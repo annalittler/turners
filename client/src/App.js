@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Homepage from "./pages/Homepage"
 import CustomerReviews from "./pages/CustomerReviews"
 import QuoteStep2 from "./pages/QuoteStep2"
+import InsuranceHome from "./pages/InsuranceHome";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                         element={<CustomerReviews />}
                     />
                     <Route path="/quote-step-2" element={<QuoteStep2 />} />
+                    <Route path="/insurance" element={<InsuranceHome />} />
                 </Routes>
             </BrowserRouter>
         </>

@@ -1,0 +1,40 @@
+@use "../../_variables.scss" as v;
+
+footer {
+  display: flex;
+  flex-direction: row;
+  background-color: v.$turners-extra-dark-grey;
+  color: v.$solid-white;
+  font-size: 0.8rem;
+  padding: 10px 60px;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+//   border: 2px solid green;
+  padding: 0 30px;
+}
+
+.footer-left {
+  flex: 0.3;
+  justify-content: flex-start;
+}
+
+.footer-right {
+  display: flex;
+  flex: 0.7;
+  justify-content: space-around;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+  color: v.$solid-white;
+  margin: 0 8px;
+}
+
+footer img {
+  height: 50%;
+  margin: 5px;
+}

@@ -1,0 +1,9 @@
+@use "../../_variables.scss" as v;
+
+.insurance-buttons-section {
+  background-color: v.$turners-white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 25px 0;
+}

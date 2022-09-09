@@ -1,0 +1,30 @@
+@use "../../_variables.scss" as v;
+
+.bottom-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 50px 60px;
+  background-color: v.$turners-dark-grey;
+  font-size: 1rem;
+}
+
+.bottom-nav section {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-nav-item,
+.bottom-nav section h4 {
+  //   border: 2px solid blue;
+  margin: 0;
+  color: v.$solid-white;
+}
+
+.bottom-nav p {
+  font-weight: 600;
+}
+
+.bottom-nav h4 {
+  font-weight: 700;
+}

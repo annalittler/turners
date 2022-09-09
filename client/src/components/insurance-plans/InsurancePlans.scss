@@ -1,0 +1,70 @@
+@use "../../_variables.scss" as v;
+
+.insurance-plans table {
+  width: 60%;
+  margin: 50px auto;
+  border-spacing: 0;
+  border: 1px solid v.$turners-dark-grey;
+  box-sizing: border-box;
+}
+
+table tr,
+table th,
+table td {
+  border: 1px solid v.$turners-dark-grey;
+  background-color: v.$turners-white;
+  padding: 15px 0;
+  font-weight: 700;
+}
+
+td:not(:nth-child(1)) {
+  text-align: center;
+}
+
+th span:first-child {
+  background-color: v.$turners-blue;
+  color: v.$solid-white;
+}
+
+tr > td {
+  padding: 20px;
+  width: 250px;
+}
+
+td {
+  font-size: 1.8rem;
+}
+
+th:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+
+td:first-child {
+  width: 400px;
+  font-size: 1rem;
+}
+
+tr th {
+  text-align: center;
+}
+
+tr td:nth-of-type(2),
+tr th:nth-of-type(2) {
+  background-color: v.$turners-light-blue;
+}
+
+.tick {
+  color: v.$turners-blue;
+}
+
+.cross {
+  color: v.$turners-red;
+}
+
+#optional-extras {
+  width: 100%;
+  background-color: v.$turners-white;
+  text-align: center;
+  font-size: 1.2rem;
+}

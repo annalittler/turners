@@ -1,15 +1,11 @@
 import React, { useState } from "react";
-import "./Header.css";
+import { NavLink, Link } from "react-router-dom";
+import "./Header.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMagnifyingGlass,
-  faUser,
-  faChevronDown,
-  faPhone,
-  faLocationDot,
-} from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import TurnersLogo from "./assets/turners-cars-logo.png";
 import Axios from "axios";
+import Button from "../Button/Button";
 
 const validateString = require("./ValidateString");
 
@@ -56,80 +52,69 @@ export default function Header({
   return (
     <div id="header">
       <div id="header-top-row">
-        <a href="">Cars</a>|<a href="">Turners Subscription</a>|
-        <a href="">Trucks &amp; Machinery</a>|
-        <a href="">Damages &amp; End of Life</a>|<a href="">Motorcycles</a>|
-        <a href="">General Goods</a>|
-        <a href="">Buses, Caravans &amp; Motorhomes</a>
+        <Link to="/">
+          <img src={TurnersLogo} alt="Turners Logo" id="header-turners-logo" />
+        </Link>
+        <div className="header-btns">
+          <Button value="LOGIN" className="nav-btn" />
+          <Button value="REGISTER" className="nav-btn" />
+        </div>
       </div>
-      <div id="header-middle-row">
-        <img src={TurnersLogo} alt="Turners Logo" id="header-turners-logo" />
-        <span id="header-middle-row-links">
-          <p className="header-login">
-            <FontAwesomeIcon icon={faUser} id="user-icon" />
-            <a href="">LOGIN </a>
-            OR
-            <a href=""> REGISTER</a>
-          </p>
-          <p className="header-phone">
-            <FontAwesomeIcon icon={faPhone} id="phone-icon" />
-            0800 887 637
-          </p>
-          <p className="header-find-us">
-            <FontAwesomeIcon icon={faLocationDot} id="location-icon" />
-            Find Us
-          </p>
-          <p className="header-chinese" id="chinese">
-            中文
-          </p>
-        </span>
-      </div>
-      <div id="bottom-row">
-        <span className="bottom-row-left-span">
-          <p className="br-find-car">
-            <FontAwesomeIcon icon={faMagnifyingGlass} id="mag-glass" />
-            Find a Car
-          </p>
-          <p className="br-how-to-buy">
-            How to Buy
-            <FontAwesomeIcon icon={faChevronDown} id="down-arrow" />
-          </p>
-          <p className="br-sell-car">
-            Sell your Car
-            <FontAwesomeIcon icon={faChevronDown} id="down-arrow" />
-          </p>
-          <p className="br-finance">
-            Finance &amp; Insurance
-            <FontAwesomeIcon icon={faChevronDown} id="down-arrow" />
-          </p>
-          <p className="br-subscription">
-            Turners Subscription
-            <FontAwesomeIcon icon={faChevronDown} id="down-arrow" />
-          </p>
-          <form
-            action=""
-            onSubmit={handleSearch}
-            className={notFound ? "not-found" : "search-form"}
+      <div id="nav-bar">
+        <nav>
+          <NavLink
+            to="cars"
+            className={({ isActive }) => (isActive ? "active" : "nav-link")}
           >
-            <input
-              type="text"
-              onChange={handleChange}
-              id="search-bar-input"
-              placeholder="Search Our FAQs"
-            />
-            <button id="submit-btn">Search</button>
-          </form>
-        </span>
-        <span className="bottom-row-right-span">
-          <p className="br-auctions">
+            Find a Car
+          </NavLink>
+          <NavLink
+            to="/how-to-buy"
+            className={({ isActive }) => (isActive ? "active" : "nav-link")}
+          ></NavLink>
+          <NavLink
+            to="/sell"
+            className={({ isActive }) => (isActive ? "active" : "nav-link")}
+          >
+            Sell your Car
+          </NavLink>
+          <NavLink
+            to="/finance"
+            className={({ isActive }) => (isActive ? "active" : "nav-link")}
+          >
+            Finance
+          </NavLink>
+          <NavLink
+            to="/insurance"
+            className={({ isActive }) => (isActive ? "active" : "nav-link")}
+          >
+            Insurance
+          </NavLink>
+          <NavLink
+            to="/auctions"
+            className={({ isActive }) => (isActive ? "active" : "nav-link")}
+          >
             Auctions
-            <FontAwesomeIcon icon={faChevronDown} id="down-arrow" />
-          </p>
-          <p className="br-services-info">
+          </NavLink>
+          <NavLink
+            to="/info"
+            className={({ isActive }) => (isActive ? "active" : "nav-link")}
+          >
             Services &amp; Info
-            <FontAwesomeIcon icon={faChevronDown} id="down-arrow" />
-          </p>
-        </span>
+          </NavLink>
+        </nav>
+        <form
+          action=""
+          onSubmit={handleSearch}
+          className={notFound ? "not-found" : "search-form"}
+        >
+          <input
+            type="text"
+            onChange={handleChange}
+            id="search-bar-input"
+            placeholder="Search"
+          />
+        </form>
       </div>
     </div>
   );
