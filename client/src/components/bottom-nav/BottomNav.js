@@ -9,7 +9,7 @@ export default function BottomNav() {
       <div className="bottom-nav">
         <section>
           <h4>CARS</h4>
-          {col2.map((item) => (
+          {col1.map((item) => (
             <Link to={item.link} className="bottom-nav-item">
               {item.name}
             </Link>
