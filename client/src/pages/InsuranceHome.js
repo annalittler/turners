@@ -6,6 +6,7 @@ import InsuranceButtonsSection from "../components/insurance-buttons-section/Ins
 import BottomNav from "../components/bottom-nav/BottomNav";
 import Footer from "../components/footer/Footer";
 import InsurancePlans from "../components/insurance-plans/InsurancePlans";
+import HomeFAQ from "../components/home-faqs/HomeFAQs";
 
 export default function InsuranceHome() {
   return (
@@ -14,6 +15,7 @@ export default function InsuranceHome() {
       <ImageSection />
       <InsurancePlans />
       <Reviews />
+      <HomeFAQ />
       <InsuranceButtonsSection />
       <BottomNav />
       <Footer />

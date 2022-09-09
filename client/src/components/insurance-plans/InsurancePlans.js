@@ -1,6 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCheck,
+  faXmark,
+  faChevronDown,
+  faChevronUp,
+} from "@fortawesome/free-solid-svg-icons";
 import "./InsurancePlans.scss";
 import { useState } from "react";
 
@@ -114,8 +119,18 @@ export default function InsurancePlans() {
             </>
           )}
         </table>
-        <div onClick={showMoreFunc}>
-          {showMore === false ? "Show more items" : "Show less items"}
+        <div className="show-more" onClick={showMoreFunc}>
+          {showMore === false ? (
+            <p>
+              Show more items
+              {<FontAwesomeIcon icon={faChevronDown} className="arrow" />}
+            </p>
+          ) : (
+            <p>
+              Show less items
+              {<FontAwesomeIcon icon={faChevronUp} className="arrow" />}
+            </p>
+          )}
         </div>
       </div>
     </>

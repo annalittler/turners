@@ -6,6 +6,7 @@
   border-spacing: 0;
   border: 1px solid v.$turners-dark-grey;
   box-sizing: border-box;
+  margin-bottom: 0;
 }
 
 table tr,
@@ -62,9 +63,20 @@ tr th:nth-of-type(2) {
   color: v.$turners-red;
 }
 
+.show-more {
+  // border: 2px solid green;
+  margin: 0;
+  text-align: center;
+}
+
 #optional-extras {
   width: 100%;
   background-color: v.$turners-white;
   text-align: center;
   font-size: 1.2rem;
+}
+
+.arrow {
+  color: v.$turners-dark-grey;
+  margin-left: 3px;
 }
