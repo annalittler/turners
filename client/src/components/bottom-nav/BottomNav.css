@@ -1,0 +1,27 @@
+.bottom-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 50px 60px;
+  background-color: #a3a3a3;
+  font-size: 1rem;
+}
+
+.bottom-nav section {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-nav-item,
+.bottom-nav section h4 {
+  margin: 0;
+  color: #ffffff;
+}
+
+.bottom-nav p {
+  font-weight: 600;
+}
+
+.bottom-nav h4 {
+  font-weight: 700;
+}/*# sourceMappingURL=BottomNav.css.map */

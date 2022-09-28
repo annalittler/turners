@@ -1,0 +1,43 @@
+#image-section {
+  margin: 0;
+}
+
+#hero-img-div {
+  width: 100vw;
+  background-image: url("./mazda.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
+  background-position-y: 85%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: */
+  position: relative;
+  justify-content: center;
+}
+
+.main-text h1,
+.main-text h2 {
+  color: #ffffff;
+  margin: 0;
+}
+
+.main-text h1 {
+  font-size: 2em;
+  margin: 16px 0;
+}
+
+.main-text h2 {
+  font-size: 1.2em;
+  font-weight: 500;
+  font-style: oblique;
+  margin: 16px 0;
+}
+
+.main-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 80px;
+}/*# sourceMappingURL=ImageSection.css.map */

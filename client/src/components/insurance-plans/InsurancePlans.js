@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "./InsurancePlans.scss";
 import { useState } from "react";
+import Arrow from "../reviews/assets/Arrow.svg";
 
 export default function InsurancePlans() {
   const [showMore, setShowMore] = useState(false);
@@ -19,6 +20,10 @@ export default function InsurancePlans() {
   return (
     <>
       <div className="insurance-plans">
+        <h3>
+          About Our Plans  <img src={Arrow} />
+        </h3>
+        <div className="compare-insurance">Compare our Car Insurance Cover</div>
         <table>
           <tr>
             <th></th>

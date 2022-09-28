@@ -71,7 +71,9 @@ export default function Header({
           <NavLink
             to="/how-to-buy"
             className={({ isActive }) => (isActive ? "active" : "nav-link")}
-          ></NavLink>
+          >
+            How To Buy
+          </NavLink>
           <NavLink
             to="/sell"
             className={({ isActive }) => (isActive ? "active" : "nav-link")}

@@ -1,0 +1,30 @@
+.home-faqs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.questions-section {
+  display: flex;
+}
+
+.home-faqs section div {
+  width: 475px;
+  margin: 20px;
+}
+
+.home-faq-question::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: #d9d9d9;
+  border-radius: 5px;
+  display: block;
+}
+
+.faq-arrow {
+  display: inline-block;
+  border: 1px solid green;
+}/*# sourceMappingURL=HomeFAQs.css.map */
